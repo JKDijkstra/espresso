@@ -25,7 +25,7 @@ topBar = tk.Label(window, width=0, height=0, takefocus=0)
 topBar.grid(row=0, column=0)
 topBar.config(anchor="e")
 exitButton = tk.Button(window, text='exit', command=exitProgram, height=2, width=12)
-exitButton.grid(row=1, column=0)
+exitButton.grid(row=1, column=1)
 
 updateTime()
 
