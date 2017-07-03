@@ -21,7 +21,7 @@ def updateTime():
 
 
 topBar = tk.Label(window, width=50, height=0, takefocus=0)
-topBar.grid(row=0, columnspan=10, anchor='w')
+topBar.grid(row=0, columnspan=10, sticky='w')
 exitButton = tk.Button(window, text='exit', command=exitProgram, height=2, width=12)
 exitButton.grid(row=1, column=0)
 
