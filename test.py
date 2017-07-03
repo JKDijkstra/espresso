@@ -1,7 +1,9 @@
 #!/usr/bin/python
 
+import threading
 import tkinter as tk
 from time import *
+
 
 window = tk.Tk()
 window.title("Espresso")
@@ -15,13 +17,15 @@ def exitProgram():
 
 def updateTime():
     topBar.config(text=strftime('%H:%M', localtime()))
+    threading.Timer(1.0, updateTime).start()
+
 
 
 topBar = tk.Label(window, width=0, height=0, takefocus=0)
 topBar.grid(row=0, column=0, sticky=tk.W)
-timeButton = tk.Button(window, text='update', command=updateTime, height=2, width=12)
-timeButton.grid(row=1, column=0, sticky=tk.S)
 exitButton = tk.Button(window, text='exit', command=exitProgram, height=2, width=12)
-exitButton.grid(row=1, column=1, sticky=tk.S)
+exitButton.grid(row=1, column=0, sticky=tk.S)
+
+updateTime()
 
 tk.mainloop()
