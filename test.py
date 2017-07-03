@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import Tkinter as tk
+import tkinter as tk
 from time import *
 
 window = tk.Tk()
