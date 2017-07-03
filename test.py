@@ -20,9 +20,8 @@ def updateTime():
     threading.Timer(1.0, updateTime).start()
 
 
-
 topBar = tk.Label(window, width=0, height=0, takefocus=0)
-topBar.grid(row=0, column=5, sticky=tk.E)
+topBar.grid(row=0, column=5, sticky='e')
 exitButton = tk.Button(window, text='exit', command=exitProgram, height=2, width=12)
 exitButton.grid(row=1, column=0)
 
